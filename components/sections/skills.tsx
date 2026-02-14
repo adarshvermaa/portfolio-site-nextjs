@@ -78,11 +78,13 @@ export function Skills() {
             <div className="absolute inset-0 pointer-events-none z-0">
                 <QuantumFieldBackground />
                 {/* Mathematical Formulations Overlay */}
-                <div className="absolute top-10 left-5 md:left-20 opacity-30 text-2xl md:text-4xl font-serif font-bold pointer-events-none select-none animate-pulse">
-                    det(A) = ∑ sgn(σ) ∏ a<sub className="text-sm">i,σ(i)</sub>
-                </div>
-                <div className="absolute bottom-10 right-5 md:right-20 opacity-30 text-xl md:text-3xl font-serif font-bold pointer-events-none select-none animate-pulse text-muted-foreground">
-                    Volume Scaling (Determinant)
+                <div className="absolute top-10 left-5 md:left-20 text-foreground/30 font-serif font-bold pointer-events-none select-none animate-pulse flex flex-col gap-1">
+                    <div className="text-2xl md:text-4xl">
+                        det(A) = ∑ sgn(σ) ∏ a<sub className="text-sm">i,σ(i)</sub>
+                    </div>
+                    <span className="text-sm md:text-base font-sans font-normal tracking-widest uppercase opacity-70">
+                        Volume Scaling (Determinant)
+                    </span>
                 </div>
             </div>
 

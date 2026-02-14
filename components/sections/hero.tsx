@@ -141,9 +141,15 @@ export function Hero() {
                 <LagrangianBackground />
 
                 {/* Visual Formula Overlays */}
-                <div className="absolute top-[15%] right-[5%] md:right-[10%] text-foreground/30 text-xl md:text-3xl font-serif italic select-none pointer-events-none flex flex-col items-end gap-2 animate-pulse drop-shadow-lg">
-                    <div>f(x) = ∑ [ f⁽ⁿ⁾(a) / n! ] (x-a)ⁿ</div>
-                    <div className="text-xs md:text-xl opacity-90">d/dt(∂L/∂q̇) - ∂L/∂q = 0</div>
+                <div className="absolute top-[15%] right-[5%] md:right-[10%] text-foreground/30 font-serif italic select-none pointer-events-none flex flex-col items-end gap-6 animate-pulse drop-shadow-lg z-0">
+                    <div className="flex flex-col items-end">
+                        <div className="text-xl md:text-3xl">f(x) = ∑ [ f⁽ⁿ⁾(a) / n! ] (x-a)ⁿ</div>
+                        <span className="text-xs md:text-sm not-italic opacity-70 font-sans tracking-widest uppercase">Taylor Series</span>
+                    </div>
+                    <div className="flex flex-col items-end">
+                        <div className="text-lg md:text-2xl opacity-90">d/dt(∂L/∂q̇) - ∂L/∂q = 0</div>
+                        <span className="text-xs md:text-sm not-italic opacity-70 font-sans tracking-widest uppercase">Euler-Lagrange Equation</span>
+                    </div>
                 </div>
 
                 {/* Keep one subtle blob for texture/vignette */}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { Github } from "lucide-react";
 
 export function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -50,7 +51,13 @@ export function Header() {
                 </nav>
 
                 <div className="flex items-center gap-4">
-                    {/* Mobile Menu Trigger could go here */}
+                    <Link
+                        href="https://github.com/adarshvermaa/portfolio-site-nextjs"
+                        target="_blank"
+                        className="text-foreground/80 hover:text-foreground transition-colors"
+                    >
+                        <Github className="w-5 h-5" />
+                    </Link>
                     <ThemeToggle />
                 </div>
             </div>
