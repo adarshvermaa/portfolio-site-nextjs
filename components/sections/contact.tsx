@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Loader2, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { QuantumFieldBackground } from "@/components/ui/quantum-field-background";
 
 const formSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters"),
@@ -57,8 +58,12 @@ export function Contact() {
     };
 
     return (
-        <section id="contact" className="py-20 px-4">
-            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+        <section id="contact" className="py-20 px-4 relative overflow-hidden">
+            {/* Quantum Field Background */}
+            <div className="absolute inset-0 pointer-events-none z-0">
+                <QuantumFieldBackground />
+            </div>
+            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 relative z-10">
                 <div>
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tighter">Get in Touch</h2>
                     <p className="text-muted-foreground mb-8">
@@ -72,7 +77,7 @@ export function Contact() {
                             </div>
                             <div>
                                 <h3 className="font-medium">Email</h3>
-                                <p className="text-muted-foreground">hello@example.com</p>
+                                <p className="text-muted-foreground">avwithai.port@gmail.com</p>
                             </div>
                         </div>
 

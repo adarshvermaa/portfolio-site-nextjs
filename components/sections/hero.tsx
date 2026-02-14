@@ -6,7 +6,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowDown } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { FourierBackground } from "@/components/ui/fourier-background";
+import { TaylorBackground } from "@/components/ui/taylor-background";
+import { LagrangianBackground } from "@/components/ui/lagrangian-background";
+import { QuantumFieldBackground } from "@/components/ui/quantum-field-background";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -71,26 +73,7 @@ export function Hero() {
                     ease: "power3.out",
                 }, "-=0.8");
 
-            // Separate Timeline for Arrow to avoid conflict
-            gsap.fromTo(arrowRef.current,
-                { opacity: 0, y: -20 },
-                { opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 1.5 }
-            );
 
-            // Scroll Trigger for Arrow Minimize
-            gsap.to(arrowRef.current, {
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "top top",
-                    end: "20% top",
-                    scrub: true,
-                },
-                scale: 0,
-                opacity: 0,
-                y: 50,
-                ease: "power1.in",
-                immediateRender: false
-            });
 
             // Mouse Parallax Effect
             const container = containerRef.current;
@@ -142,34 +125,50 @@ export function Hero() {
     return (
         <section
             ref={containerRef}
-            className="min-h-[100dvh] flex flex-col justify-center items-center px-4 relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden"
+            className="min-h-[100dvh] flex flex-col justify-center items-center px-4 relative overflow-hidden"
+            style={{ isolation: 'isolate' }}
         >
-            {/* Animated Background Elements - Fourier Waves */}
+            {/* Animated Background Elements - Combined Math Visualization */}
             <div ref={bgRef} className="absolute inset-0 pointer-events-none -z-10">
-                <FourierBackground />
+                {/* Base Layer: Quantum Field (Unified Site Theme) */}
+                <div className="absolute inset-0 opacity-40">
+                    <QuantumFieldBackground />
+                </div>
+
+                {/* Core Animation (Taylor) */}
+                <TaylorBackground />
+                {/* Secondary Light Animation (Lagrangian) - Deeper Z-Index */}
+                <LagrangianBackground />
+
+                {/* Visual Formula Overlays */}
+                <div className="absolute top-[15%] right-[5%] md:right-[10%] text-foreground/30 text-xl md:text-3xl font-serif italic select-none pointer-events-none flex flex-col items-end gap-2 animate-pulse drop-shadow-lg">
+                    <div>f(x) = ∑ [ f⁽ⁿ⁾(a) / n! ] (x-a)ⁿ</div>
+                    <div className="text-xs md:text-xl opacity-90">d/dt(∂L/∂q̇) - ∂L/∂q = 0</div>
+                </div>
+
                 {/* Keep one subtle blob for texture/vignette */}
                 <div className="bg-blob absolute top-[20%] left-[20%] w-72 h-72 bg-neutral-200/30 dark:bg-neutral-800/20 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-overlay filter opacity-50" />
             </div>
 
             <div className="max-w-4xl text-center space-y-6 md:space-y-8 flex flex-col items-center relative z-10">
-                <div ref={imageRef} className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden border-4 border-muted shadow-2xl mb-2 sm:mb-4 group cursor-pointer">
+                <div ref={imageRef} className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-muted shadow-2xl mb-2 sm:mb-4 group cursor-pointer">
                     <Image
                         src="/profile.jpg"
                         alt="Adarsh Verma"
                         fill
                         priority
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="object-cover transition-transform duration-500 group-hover:scale-110 "
                     />
                 </div>
 
-                <div className="space-y-1 sm:space-y-2">
+                <div className="space-y-1 sm:space-y-2 ">
                     <h2 className="text-xl sm:text-2xl md:text-3xl font-medium tracking-tight">Adarsh Verma</h2>
                     <p className="text-xs sm:text-sm md:text-base text-muted-foreground uppercase tracking-widest">
                         Full Stack Developer • AI Engineer • System Architect
                     </p>
                 </div>
 
-                <h1 ref={textRef} className="text-[clamp(2.5rem,6vw,6rem)] font-bold tracking-tighter leading-tight perspective-[1000px] mb-8 pb-2">
+                <h1 ref={textRef} className="text-[clamp(2rem,5vw,5.5rem)] font-bold tracking-tighter leading-tight perspective-[1000px] mb-8 pb-2">
                     <span className="clipping-container inline-block overflow-hidden py-1"><span className="word inline-block transform transition-transform hover:scale-110 duration-300 cursor-default">Building</span></span>{" "}
                     <span className="clipping-container inline-block overflow-hidden py-1"><span className="word inline-block transform transition-transform hover:scale-110 duration-300 cursor-default">Scalable</span></span>{" "}
                     <span className="clipping-container inline-block overflow-hidden py-1"><span className="word inline-block transform transition-transform hover:scale-110 duration-300 cursor-default">Intelligent</span></span>{" "}

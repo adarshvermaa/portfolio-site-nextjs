@@ -4,7 +4,9 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projects } from "@/lib/data";
+import { QuantumFieldBackground } from "@/components/ui/quantum-field-background";
 import Link from "next/link";
+import Image from "next/image";
 import { Github, ExternalLink, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -89,6 +91,11 @@ export function Projects() {
             <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
             <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
 
+            {/* Quantum Field Background */}
+            <div className="absolute inset-0 pointer-events-none z-0">
+                <QuantumFieldBackground />
+            </div>
+
             <div className="max-w-7xl mx-auto">
                 <div className="mb-20 text-center">
                     <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6">Featured Works</h2>
@@ -106,8 +113,15 @@ export function Projects() {
                             <div className="project-content p-2 bg-muted/30 border border-border/50 rounded-2xl relative transition-shadow hover:shadow-2xl hover:shadow-primary/10 duration-500">
                                 <div className="relative aspect-[16/9] overflow-hidden rounded-xl mb-6">
                                     <div className="project-image absolute inset-0 bg-muted">
-                                        {/* Placeholder gradient matching B&W theme */}
-                                        <div className="absolute inset-0 bg-gradient-to-br from-neutral-200 to-neutral-400 dark:from-neutral-800 dark:to-neutral-950" />
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            fill
+                                            className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                        />
+
+                                        {/* Gradient Overlay for subtle text readability if needed, or remove */}
+                                        <div className="absolute inset-0 bg-black/20" />
 
                                         {/* Overlay text for 'View Project' */}
                                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 bg-black/40 backdrop-blur-[2px]">

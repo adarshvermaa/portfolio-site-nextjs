@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SmoothScroll } from "@/components/ui/smooth-scroll";
+import { DevToolsHider } from "@/components/ui/dev-tools-hider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://adarshverma.dev"),
+  metadataBase: new URL("https://avwithai.com"),
   title: "Adarsh Verma | Full Stack Developer",
   description: "Portfolio of Adarsh Verma, a Full Stack Developer specializing in building exceptional digital experiences.",
   keywords: ["Adarsh Verma", "Portfolio", "Full Stack Developer", "Next.js", "React", "Web Developer"],
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Adarsh Verma | Full Stack Developer",
     description: "Building exceptional digital experiences with performance and aesthetics.",
-    url: "https://adarshverma.dev", // Replace with actual URL
+    url: "https://avwithai.com", // Replace with actual URL
     siteName: "Adarsh Verma Portfolio",
     images: [
       {
@@ -35,6 +37,10 @@ export const metadata: Metadata = {
   },
 };
 
+import Script from "next/script";
+
+// ...
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -47,8 +53,28 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
-          {children}
+          <SmoothScroll>
+            <DevToolsHider />
+            {children}
+          </SmoothScroll>
         </ThemeProvider>
+
+        {/* JSON-LD Structured Data for SEO */}
+        <Script id="json-ld" strategy="afterInteractive" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Adarsh Verma",
+            "url": "https://avwithai.com",
+            "jobTitle": "Full Stack Developer",
+            "sameAs": [
+              "https://github.com/adarshvermaa",
+              "https://linkedin.com/in/adarsh-verma",
+              "https://x.com/adarsh_verma"
+            ],
+            "description": "Full Stack Developer specializing in building exceptional digital experiences using Next.js, React, and AI technologies."
+          })}
+        </Script>
       </body>
     </html>
   );

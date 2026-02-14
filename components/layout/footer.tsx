@@ -1,11 +1,15 @@
 import Link from "next/link";
 import { Github, Linkedin } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
+import { QuantumFieldBackground } from "@/components/ui/quantum-field-background";
 
 export function Footer() {
     return (
-        <footer className="py-8 border-t border-border mt-20">
-            <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+        <footer className="pt-20 pb-8 relative overflow-hidden">
+            <div className="absolute inset-0 pointer-events-none z-0">
+                <QuantumFieldBackground />
+            </div>
+            <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 relative z-10">
                 <div>
                     <p className="text-sm text-muted-foreground">
                         © {new Date().getFullYear()} Adarsh Verma. All rights reserved.

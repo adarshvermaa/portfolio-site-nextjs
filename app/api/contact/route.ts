@@ -43,14 +43,61 @@ Message:
 ${message}
         `,
             html: `
-<h3>New Contact Form Submission</h3>
-<p><strong>Name:</strong> ${name}</p>
-<p><strong>Email:</strong> ${email}</p>
-<p><strong>Subject:</strong> ${subject}</p>
-<hr />
-<p><strong>Message:</strong></p>
-<pre style="font-family: sans-serif;">${message}</pre>
-        `,
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Contact Submission</title>
+  <style>
+    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f4f4f4; }
+    .container { max-width: 600px; margin: 40px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+    .header { background: #000000; color: #ffffff; padding: 30px; text-align: center; }
+    .header h1 { margin: 0; font-size: 24px; font-weight: 600; letter-spacing: 1px; }
+    .content { padding: 40px 30px; }
+    .field { margin-bottom: 20px; }
+    .label { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 5px; font-weight: 600; }
+    .value { font-size: 16px; color: #000; font-weight: 500; }
+    .message-box { background: #fafafa; border-left: 4px solid #000; padding: 20px; margin-top: 10px; border-radius: 4px; }
+    .footer { background: #f9f9f9; padding: 20px; text-align: center; font-size: 12px; color: #999; border-top: 1px solid #eee; }
+    .button { display: inline-block; padding: 10px 20px; background: #000; color: #fff; text-decoration: none; border-radius: 6px; font-size: 14px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>New Portfolio Inquiry</h1>
+    </div>
+    <div class="content">
+      <div class="field">
+        <div class="label">From</div>
+        <div class="value">${name} <span style="color: #666; font-weight: normal;">(${email})</span></div>
+      </div>
+      
+      <div class="field">
+        <div class="label">Subject</div>
+        <div class="value">${subject}</div>
+      </div>
+
+      <div class="field">
+        <div class="label">Message</div>
+        <div class="message-box">
+          <div class="value" style="white-space: pre-wrap;">${message}</div>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="mailto:${email}?subject=Re: ${subject}" style="display: inline-block; padding: 12px 24px; background-color: #000000; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 14px;">Reply to Sender</a>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Sent from your portfolio website contact form.</p>
+      <p>&copy; ${new Date().getFullYear()} Adarsh Verma. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
+            `,
             attachments: [],
         };
 
