@@ -4,7 +4,7 @@ export const projects = [
         title: "AI-Powered Indian Stock Market Analyzer",
         description: "AI-powered real-time stock analysis for NSE/BSE markets with ML predictions, technical indicators, and sentiment analysis.",
         technologies: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "Recharts", "TradingView Lightweight Charts", "Socket.IO", "WebSockets", "Node.js", "Express", "Python", "FastAPI", "XGBoost", "Prophet", "scikit-learn", "LSTM", "FinBERT", "yfinance", "BeautifulSoup", "TextBlob", "schedule", "TimescaleDB (PostgreSQL with time-series)", "Redis", "Docker", "Docker Compose", "Nginx"],
-        image: "/image.png",
+        image: "/image.jpeg",
         link: "https://analyzer.avwithai.com/",
         github: "https://github.com/adarshvermaa/analyzer",
     },

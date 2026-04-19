@@ -216,15 +216,15 @@ export default function RapsyShowcase() {
             <div className="md:col-span-1 lg:col-span-2 group relative overflow-hidden rounded-[2rem] bg-zinc-900 border border-zinc-800/50 p-8 flex flex-col justify-between hover:border-cyan-500/30 transition-colors duration-500">
               <div className="relative z-10 flex flex-col items-start h-full">
                 <div className="w-full flex justify-between items-start mb-6">
-                   <div className="w-12 h-12 rounded-xl bg-cyan-950/50 border border-cyan-900/50 flex items-center justify-center text-cyan-400 group-hover:-rotate-12 transition-transform duration-500">
-                     <Dumbbell className="w-6 h-6 " />
-                   </div>
-                   {/* Animated Toggle Graphic */}
-                   <div className="flex items-center bg-black/50 border border-white/10 rounded-full p-1 overflow-hidden relative w-36 h-8">
-                     <div className="absolute left-1 top-1 bottom-1 w-1/2 bg-cyan-500/20 rounded-full animate-slide-right opacity-50 blur-sm" />
-                     <div className="flex-1 text-center text-[9px] uppercase tracking-wider text-cyan-400 z-10 font-bold font-mono">Bodyweight</div>
-                     <div className="flex-1 text-center text-[9px] uppercase tracking-wider text-zinc-500 z-10 font-bold font-mono relative"><span className="absolute inset-0 bg-transparent" />Machine</div>
-                   </div>
+                  <div className="w-12 h-12 rounded-xl bg-cyan-950/50 border border-cyan-900/50 flex items-center justify-center text-cyan-400 group-hover:-rotate-12 transition-transform duration-500">
+                    <Dumbbell className="w-6 h-6 " />
+                  </div>
+                  {/* Animated Toggle Graphic */}
+                  <div className="flex items-center bg-black/50 border border-white/10 rounded-full p-1 overflow-hidden relative w-36 h-8">
+                    <div className="absolute left-1 top-1 bottom-1 w-1/2 bg-cyan-500/20 rounded-full animate-slide-right opacity-50 blur-sm" />
+                    <div className="flex-1 text-center text-[9px] uppercase tracking-wider text-cyan-400 z-10 font-bold font-mono">Bodyweight</div>
+                    <div className="flex-1 text-center text-[9px] uppercase tracking-wider text-zinc-500 z-10 font-bold font-mono relative"><span className="absolute inset-0 bg-transparent" />Machine</div>
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-3">72+ Exercises Mapped</h3>
                 <p className="text-zinc-400 text-sm md:text-base">
@@ -235,41 +235,41 @@ export default function RapsyShowcase() {
 
             {/* Feature 3: Hyper-Accurate KCAL Tracking */}
             <div className="lg:col-span-2 row-span-1 group relative overflow-hidden rounded-[2rem] bg-zinc-900 border border-zinc-800/50 p-8 flex flex-col md:flex-row gap-6 hover:border-rose-500/30 transition-colors duration-500">
-               <div className="flex-[0.6] relative z-10">
-                 <div className="w-12 h-12 rounded-xl bg-rose-950/50 border border-rose-900/50 flex items-center justify-center mb-4 text-rose-400 group-hover:scale-110 transition-transform">
-                   <Activity className="w-6 h-6" />
-                 </div>
-                 <h3 className="text-xl font-bold mb-2">MET-Bound Engine</h3>
-                 <p className="text-zinc-400 text-sm">
-                   Precision calorie tracking that mathematically bounds your active rep duration using hyper-accurate Metabolic Equivalent (MET) mapping. Absolute honesty in your results.
-                 </p>
-               </div>
-               <div className="flex-[0.4] bg-black/40 rounded-xl border border-white/5 p-4 relative overflow-hidden flex flex-col justify-center items-center">
-                 <div className="text-[10px] text-zinc-500 font-mono mb-2 w-full flex justify-between"><span>IDLE</span> <span>ACTIVE REP</span></div>
-                 <div className="w-full h-2 bg-zinc-800 rounded-full overflow-hidden flex">
-                    <div className="h-full bg-zinc-700 w-1/4" />
-                    <div className="h-full bg-gradient-to-r from-rose-500 to-orange-500 w-1/2 animate-pulse" />
-                    <div className="h-full bg-zinc-700 w-1/4" />
-                 </div>
-                 <div className="mt-4 text-2xl font-black text-rose-400 animate-pulse-glow">142 KCAL</div>
-               </div>
+              <div className="flex-[0.6] relative z-10">
+                <div className="w-12 h-12 rounded-xl bg-rose-950/50 border border-rose-900/50 flex items-center justify-center mb-4 text-rose-400 group-hover:scale-110 transition-transform">
+                  <Activity className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">MET-Bound Engine</h3>
+                <p className="text-zinc-400 text-sm">
+                  Precision calorie tracking that mathematically bounds your active rep duration using hyper-accurate Metabolic Equivalent (MET) mapping. Absolute honesty in your results.
+                </p>
+              </div>
+              <div className="flex-[0.4] bg-black/40 rounded-xl border border-white/5 p-4 relative overflow-hidden flex flex-col justify-center items-center">
+                <div className="text-[10px] text-zinc-500 font-mono mb-2 w-full flex justify-between"><span>IDLE</span> <span>ACTIVE REP</span></div>
+                <div className="w-full h-2 bg-zinc-800 rounded-full overflow-hidden flex">
+                  <div className="h-full bg-zinc-700 w-1/4" />
+                  <div className="h-full bg-gradient-to-r from-rose-500 to-orange-500 w-1/2 animate-pulse" />
+                  <div className="h-full bg-zinc-700 w-1/4" />
+                </div>
+                <div className="mt-4 text-2xl font-black text-rose-400 animate-pulse-glow">142 KCAL</div>
+              </div>
             </div>
 
             {/* Feature 4: Form Guidance & Instructional Hold */}
             <div className="md:col-span-1 lg:col-span-1 group relative overflow-hidden rounded-[2rem] bg-zinc-900 border border-zinc-800/50 p-8 hover:border-indigo-500/30 transition-colors duration-500 flex flex-col">
               <div className="relative z-10 w-full mb-4">
-                 <div className="w-full h-24 bg-black/40 border border-indigo-500/20 rounded-xl flex items-center justify-center relative overflow-hidden group-hover:border-indigo-500/50 transition-colors">
-                    <div className="absolute inset-0 bg-indigo-500/5 animate-pulse" />
-                    {/* Abstract Stick Figure Geometry */}
-                    <svg width="40" height="60" viewBox="0 0 40 60" className="stroke-indigo-400 stroke-2 fill-none overflow-visible">
-                       <circle cx="20" cy="10" r="6" className="fill-indigo-400/20" />
-                       <line x1="20" y1="16" x2="20" y2="35" className="target-line" />
-                       <line x1="20" y1="20" x2="5" y2="30" className="target-line" />
-                       <line x1="20" y1="20" x2="35" y2="30" className="target-line" />
-                       <line x1="20" y1="35" x2="10" y2="55" className="target-line" />
-                       <line x1="20" y1="35" x2="30" y2="55" className="target-line" />
-                    </svg>
-                 </div>
+                <div className="w-full h-24 bg-black/40 border border-indigo-500/20 rounded-xl flex items-center justify-center relative overflow-hidden group-hover:border-indigo-500/50 transition-colors">
+                  <div className="absolute inset-0 bg-indigo-500/5 animate-pulse" />
+                  {/* Abstract Stick Figure Geometry */}
+                  <svg width="40" height="60" viewBox="0 0 40 60" className="stroke-indigo-400 stroke-2 fill-none overflow-visible">
+                    <circle cx="20" cy="10" r="6" className="fill-indigo-400/20" />
+                    <line x1="20" y1="16" x2="20" y2="35" className="target-line" />
+                    <line x1="20" y1="20" x2="5" y2="30" className="target-line" />
+                    <line x1="20" y1="20" x2="35" y2="30" className="target-line" />
+                    <line x1="20" y1="35" x2="10" y2="55" className="target-line" />
+                    <line x1="20" y1="35" x2="30" y2="55" className="target-line" />
+                  </svg>
+                </div>
               </div>
               <h3 className="text-xl font-bold mb-2">Pulsing Guidance</h3>
               <p className="text-zinc-400 text-sm">
@@ -298,34 +298,34 @@ export default function RapsyShowcase() {
             <p className="text-zinc-400 text-lg max-w-2xl mx-auto">See the Gym integration and precise Machine-Weight features directly from the live application.</p>
           </div>
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-             <div className="relative rounded-[2rem] overflow-hidden border border-zinc-800/50 bg-zinc-900 group shadow-2xl">
-                <img src="/rapsy-home.png" alt="Rapsy Dashboard" className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" />
-                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 pt-20">
-                   <h3 className="text-lg font-bold text-white mb-1">Intelligent Dashboard</h3>
-                   <p className="text-zinc-400 text-sm">Track daily calories, reps, and direct paths to Home and Gym workflows.</p>
-                </div>
-             </div>
-             <div className="relative rounded-[2rem] overflow-hidden border border-zinc-800/50 bg-zinc-900 group shadow-2xl">
-                <img src="/rapsy-gym-3.png" alt="Gym Exercise List" className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" />
-                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 pt-20">
-                   <h3 className="text-lg font-bold text-white mb-1">Extensive Exercise Library</h3>
-                   <p className="text-zinc-400 text-sm">Toggle seamlessly between Home calisthenics and Gym machines.</p>
-                </div>
-             </div>
-             <div className="relative rounded-[2rem] overflow-hidden border border-zinc-800/50 bg-zinc-900 group shadow-2xl">
-                <img src="/rapsy-gym-2.png" alt="Weight Logging Interface" className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" />
-                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 pt-20">
-                   <h3 className="text-lg font-bold text-white mb-1">Dynamic Weight Logging</h3>
-                   <p className="text-zinc-400 text-sm">Precisely log plates, total weight, and dumbbells before tracking.</p>
-                </div>
-             </div>
-             <div className="relative rounded-[2rem] overflow-hidden border border-zinc-800/50 bg-zinc-900 group shadow-2xl">
-                <img src="/rapsy-gym-1.png" alt="Instructional Form Overlay" className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" />
-                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 pt-20">
-                   <h3 className="text-lg font-bold text-white mb-1">Instructional Hold Phase</h3>
-                   <p className="text-zinc-400 text-sm">Ensure perfect form with visual stick figure guides before engaging the AI.</p>
-                </div>
-             </div>
+            <div className="relative rounded-[2rem] overflow-hidden border border-zinc-800/50 bg-zinc-900 group shadow-2xl">
+              <img src="/rapsy-home.jpeg" alt="Rapsy Dashboard" className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" />
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 pt-20">
+                <h3 className="text-lg font-bold text-white mb-1">Intelligent Dashboard</h3>
+                <p className="text-zinc-400 text-sm">Track daily calories, reps, and direct paths to Home and Gym workflows.</p>
+              </div>
+            </div>
+            <div className="relative rounded-[2rem] overflow-hidden border border-zinc-800/50 bg-zinc-900 group shadow-2xl">
+              <img src="/rapsy-gym-3.jpeg" alt="Gym Exercise List" className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" />
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 pt-20">
+                <h3 className="text-lg font-bold text-white mb-1">Extensive Exercise Library</h3>
+                <p className="text-zinc-400 text-sm">Toggle seamlessly between Home calisthenics and Gym machines.</p>
+              </div>
+            </div>
+            <div className="relative rounded-[2rem] overflow-hidden border border-zinc-800/50 bg-zinc-900 group shadow-2xl">
+              <img src="/rapsy-gym-2.jpeg" alt="Weight Logging Interface" className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" />
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 pt-20">
+                <h3 className="text-lg font-bold text-white mb-1">Dynamic Weight Logging</h3>
+                <p className="text-zinc-400 text-sm">Precisely log plates, total weight, and dumbbells before tracking.</p>
+              </div>
+            </div>
+            <div className="relative rounded-[2rem] overflow-hidden border border-zinc-800/50 bg-zinc-900 group shadow-2xl">
+              <img src="/rapsy-gym-1.jpeg" alt="Instructional Form Overlay" className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" />
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 pt-20">
+                <h3 className="text-lg font-bold text-white mb-1">Instructional Hold Phase</h3>
+                <p className="text-zinc-400 text-sm">Ensure perfect form with visual stick figure guides before engaging the AI.</p>
+              </div>
+            </div>
           </div>
         </section>
 
