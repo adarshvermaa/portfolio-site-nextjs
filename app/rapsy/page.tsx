@@ -183,7 +183,7 @@ export default function RapsyShowcase() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[minmax(250px,auto)]">
 
-            {/* Feature 1 - Hero Size */}
+            {/* Feature 1: Zero-Touch Form Analysis */}
             <div className="md:col-span-2 lg:col-span-2 row-span-2 group relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-zinc-900 to-black border border-emerald-900/30 p-8 hover:border-emerald-500/50 transition-all duration-500 flex flex-col justify-between">
               <div className="absolute right-[-10%] top-[-10%] w-[50%] h-[50%] bg-emerald-500/20 blur-[100px] rounded-full group-hover:bg-emerald-500/40 transition-colors" />
 
@@ -198,7 +198,7 @@ export default function RapsyShowcase() {
               </div>
 
               {/* Decorative Element */}
-              <div className="absolute bottom-0 right-0 w-[60%] h-[50%] opactiy-50 hidden md:block border-l border-t border-white/5 bg-zinc-950/80 rounded-tl-3xl backdrop-blur-md overflow-hidden p-6 box-border">
+              <div className="absolute bottom-0 right-0 w-[60%] h-[50%] opactiy-50 hidden md:block border-l border-t border-white/5 bg-zinc-950/80 rounded-tl-3xl backdrop-blur-md overflow-hidden p-6 box-border transform group-hover:-translate-y-2 transition-transform">
                 <div className="w-full space-y-3">
                   <div className="flex justify-between items-end border-b border-white/10 pb-2">
                     <span className="text-xs text-zinc-500 font-mono">ANGLE KNEE</span>
@@ -206,72 +206,86 @@ export default function RapsyShowcase() {
                   </div>
                   <div className="flex justify-between items-end border-b border-white/10 pb-2">
                     <span className="text-xs text-zinc-500 font-mono">STATUS</span>
-                    <span className="text-sm font-bold text-white uppercase tracking-widest"><span className="text-emerald-500 mr-2">●</span>PERFECT FORM</span>
+                    <span className="text-sm font-bold text-white uppercase tracking-widest"><span className="text-emerald-500 mr-2 animate-pulse">●</span>PERFECT FORM</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Feature 2 */}
+            {/* Feature 2: 72+ Exercises Supported (Home & Gym Dynamics) */}
             <div className="md:col-span-1 lg:col-span-2 group relative overflow-hidden rounded-[2rem] bg-zinc-900 border border-zinc-800/50 p-8 flex flex-col justify-between hover:border-cyan-500/30 transition-colors duration-500">
-              <div className="relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-cyan-950/50 border border-cyan-900/50 flex items-center justify-center mb-6 text-cyan-400 group-hover:-rotate-12 transition-transform duration-500">
-                  <Activity className="w-6 h-6 " />
+              <div className="relative z-10 flex flex-col items-start h-full">
+                <div className="w-full flex justify-between items-start mb-6">
+                   <div className="w-12 h-12 rounded-xl bg-cyan-950/50 border border-cyan-900/50 flex items-center justify-center text-cyan-400 group-hover:-rotate-12 transition-transform duration-500">
+                     <Dumbbell className="w-6 h-6 " />
+                   </div>
+                   {/* Animated Toggle Graphic */}
+                   <div className="flex items-center bg-black/50 border border-white/10 rounded-full p-1 overflow-hidden relative w-36 h-8">
+                     <div className="absolute left-1 top-1 bottom-1 w-1/2 bg-cyan-500/20 rounded-full animate-slide-right opacity-50 blur-sm" />
+                     <div className="flex-1 text-center text-[9px] uppercase tracking-wider text-cyan-400 z-10 font-bold font-mono">Bodyweight</div>
+                     <div className="flex-1 text-center text-[9px] uppercase tracking-wider text-zinc-500 z-10 font-bold font-mono relative"><span className="absolute inset-0 bg-transparent" />Machine</div>
+                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-3">30+ Exercises Supported</h3>
+                <h3 className="text-2xl font-bold mb-3">72+ Exercises Mapped</h3>
                 <p className="text-zinc-400 text-sm md:text-base">
-                  From deep squats to complex multi-movement routines, Rapsy understands and counts over 30 distinct exercises without manual configuration.
+                  Whether you're doing heavy barbell squats or living room calisthenics, Rapsy perfectly understands the distinct physics. Log your weight plates, hit start, and it knows exactly what to look for.
                 </p>
               </div>
             </div>
 
-            {/* Feature 3 (Progress Charts) */}
-            <div className="lg:col-span-1 group relative overflow-hidden rounded-[2rem] bg-zinc-900 border border-zinc-800/50 p-8 flex flex-col justify-between hover:border-indigo-500/30 transition-colors duration-500">
-              <div className="relative z-10 h-full flex flex-col">
-                <div className="w-12 h-12 rounded-xl bg-indigo-950/50 border border-indigo-900/50 flex items-center justify-center mb-6 text-indigo-400 group-hover:-translate-y-1 transition-transform">
-                  <LineChart className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">History & Charts</h3>
-                <p className="text-zinc-400 text-sm flex-1">
-                  Beautiful FL-Charts implementation that breaks down your intensity, volume, and consistency over time directly in your profile.
-                </p>
-              </div>
+            {/* Feature 3: Hyper-Accurate KCAL Tracking */}
+            <div className="lg:col-span-2 row-span-1 group relative overflow-hidden rounded-[2rem] bg-zinc-900 border border-zinc-800/50 p-8 flex flex-col md:flex-row gap-6 hover:border-rose-500/30 transition-colors duration-500">
+               <div className="flex-[0.6] relative z-10">
+                 <div className="w-12 h-12 rounded-xl bg-rose-950/50 border border-rose-900/50 flex items-center justify-center mb-4 text-rose-400 group-hover:scale-110 transition-transform">
+                   <Activity className="w-6 h-6" />
+                 </div>
+                 <h3 className="text-xl font-bold mb-2">MET-Bound Engine</h3>
+                 <p className="text-zinc-400 text-sm">
+                   Precision calorie tracking that mathematically bounds your active rep duration using hyper-accurate Metabolic Equivalent (MET) mapping. Absolute honesty in your results.
+                 </p>
+               </div>
+               <div className="flex-[0.4] bg-black/40 rounded-xl border border-white/5 p-4 relative overflow-hidden flex flex-col justify-center items-center">
+                 <div className="text-[10px] text-zinc-500 font-mono mb-2 w-full flex justify-between"><span>IDLE</span> <span>ACTIVE REP</span></div>
+                 <div className="w-full h-2 bg-zinc-800 rounded-full overflow-hidden flex">
+                    <div className="h-full bg-zinc-700 w-1/4" />
+                    <div className="h-full bg-gradient-to-r from-rose-500 to-orange-500 w-1/2 animate-pulse" />
+                    <div className="h-full bg-zinc-700 w-1/4" />
+                 </div>
+                 <div className="mt-4 text-2xl font-black text-rose-400 animate-pulse-glow">142 KCAL</div>
+               </div>
             </div>
 
-            {/* Feature 4 (Voice) */}
-            <div className="lg:col-span-1 group relative overflow-hidden rounded-[2rem] bg-zinc-900 border border-zinc-800/50 p-8 hover:border-purple-500/30 transition-colors duration-500">
-              <div className="relative z-10 w-12 h-12 rounded-xl bg-purple-950/50 border border-purple-900/50 flex items-center justify-center mb-6">
-                <Volume2 className="w-6 h-6 text-purple-400 group-hover:scale-125 transition-transform" />
+            {/* Feature 4: Form Guidance & Instructional Hold */}
+            <div className="md:col-span-1 lg:col-span-1 group relative overflow-hidden rounded-[2rem] bg-zinc-900 border border-zinc-800/50 p-8 hover:border-indigo-500/30 transition-colors duration-500 flex flex-col">
+              <div className="relative z-10 w-full mb-4">
+                 <div className="w-full h-24 bg-black/40 border border-indigo-500/20 rounded-xl flex items-center justify-center relative overflow-hidden group-hover:border-indigo-500/50 transition-colors">
+                    <div className="absolute inset-0 bg-indigo-500/5 animate-pulse" />
+                    {/* Abstract Stick Figure Geometry */}
+                    <svg width="40" height="60" viewBox="0 0 40 60" className="stroke-indigo-400 stroke-2 fill-none overflow-visible">
+                       <circle cx="20" cy="10" r="6" className="fill-indigo-400/20" />
+                       <line x1="20" y1="16" x2="20" y2="35" className="target-line" />
+                       <line x1="20" y1="20" x2="5" y2="30" className="target-line" />
+                       <line x1="20" y1="20" x2="35" y2="30" className="target-line" />
+                       <line x1="20" y1="35" x2="10" y2="55" className="target-line" />
+                       <line x1="20" y1="35" x2="30" y2="55" className="target-line" />
+                    </svg>
+                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-2">Real-Time Voice</h3>
+              <h3 className="text-xl font-bold mb-2">Pulsing Guidance</h3>
               <p className="text-zinc-400 text-sm">
-                Get auditory rep counts and form corrections. Keeping you in the zone, entirely hands-free.
+                Understand the movement before you start. The fluid stick-figure instructional hold guarantees you nail the physics.
               </p>
             </div>
 
-            {/* Feature 5 (Performance) */}
-            <div className="md:col-span-2 lg:col-span-2 group relative overflow-hidden rounded-[2rem] bg-gradient-to-tr from-zinc-900 to-black border border-zinc-800/50 p-8 flex flex-row items-center justify-between hover:border-orange-500/30 transition-colors duration-500">
-              <div className="relative z-10 flex-[0.7]">
-                <div className="flex gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-orange-950/50 border border-orange-900/50 flex items-center justify-center">
-                    <Cpu className="w-6 h-6 text-orange-400" />
-                  </div>
-                  <div className="w-12 h-12 rounded-xl bg-rose-950/50 border border-rose-900/50 flex items-center justify-center">
-                    <Zap className="w-6 h-6 text-rose-400" />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold mb-3">60 FPS Hardware Acceleration</h3>
-                <p className="text-zinc-400 text-sm">
-                  Leverages native device rendering to process camera feeds instantly. No loading, no jittering. Experience the butter-smooth live graphics and Lottie animations overlaying your workout.
-                </p>
+            {/* Feature 5: Real-Time Voice */}
+            <div className="lg:col-span-1 group relative overflow-hidden rounded-[2rem] bg-zinc-900 border border-zinc-800/50 p-8 hover:border-purple-500/30 transition-colors duration-500 flex flex-col h-full">
+              <div className="relative z-10 w-12 h-12 rounded-xl bg-purple-950/50 border border-purple-900/50 flex items-center justify-center mb-6 text-purple-400 group-hover:scale-125 transition-transform">
+                <Volume2 className="w-6 h-6" />
               </div>
-              <div className="hidden md:flex flex-[0.3] justify-end">
-                {/* Visual FPS Counter */}
-                <div className="px-6 py-6 rounded-2xl bg-black border border-white/10 flex flex-col justify-center items-center">
-                  <span className="text-xs text-orange-400 font-mono tracking-widest mb-1">STABLE FPS</span>
-                  <span className="text-5xl font-black text-white">59.9</span>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold mb-2">Real-Time Voice</h3>
+              <p className="text-zinc-400 text-sm flex-1">
+                Get auditory rep counts and form corrections. Keeping you in the zone, entirely hands-free.
+              </p>
             </div>
 
           </div>
@@ -367,8 +381,24 @@ export default function RapsyShowcase() {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-15px); }
         }
+        @keyframes slide-right {
+          0%, 100% { transform: translateX(0); }
+          50% { transform: translateX(100%); }
+        }
+        @keyframes pulse-glow {
+          0%, 100% { text-shadow: 0 0 10px rgba(244,63,94,0.3); opacity: 0.9; }
+          50% { text-shadow: 0 0 20px rgba(244,63,94,0.8); opacity: 1; }
+        }
+        @keyframes draw-line {
+          0% { stroke-dasharray: 100; stroke-dashoffset: 100; }
+          50% { stroke-dasharray: 100; stroke-dashoffset: 0; }
+          100% { stroke-dasharray: 100; stroke-dashoffset: 100; }
+        }
         .animate-float-slow { animation: float-slow 4s ease-in-out infinite; }
         .animate-float-fast { animation: float-fast 3s ease-in-out infinite; }
+        .animate-slide-right { animation: slide-right 4s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+        .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+        .target-line { animation: draw-line 3s ease-in-out infinite; }
       `}} />
 
     </div>

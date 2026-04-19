@@ -8,6 +8,15 @@ export const projects = [
         link: "https://analyzer.avwithai.com/",
         github: "https://github.com/adarshvermaa/analyzer",
     },
+    {
+        id: 2,
+        title: "Rapsy AI - Personal Fitness Trainer",
+        description: "An AI-powered mobile fitness app natively running on-device. Uses ML Kit Pose Detection to track form, count reps, and calculate MET-bound calorie variations in real time without server latency.",
+        technologies: ["Flutter", "Dart", "Google ML Kit", "Pose Detection", "TensorFlow", "Firebase", "RevenueCat"],
+        image: "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?q=80&w=1470&auto=format&fit=crop",
+        link: "/rapsy",
+        github: "https://github.com/adarshvermaa/thankyou_flutter",
+    },
 ];
 
 export const skills: { category: string; items: string[] }[] = [
