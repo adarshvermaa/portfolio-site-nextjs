@@ -27,6 +27,7 @@ export const skills: { category: string; items: string[] }[] = [
             "TypeScript",
             "Rust",
             "Go",
+            "Dart",
             "Python",
             "SQL",
             "HTML5",
@@ -37,6 +38,7 @@ export const skills: { category: string; items: string[] }[] = [
         category: "Frontend Technologies",
         items: [
             "React",
+            "Flutter",
             "Next.js",
             "Redux",
             "Tailwind CSS",
