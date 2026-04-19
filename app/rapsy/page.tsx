@@ -291,6 +291,44 @@ export default function RapsyShowcase() {
           </div>
         </section>
 
+        {/* INTERFACE SHOWCASE SECTION */}
+        <section className="py-24 px-6 border-t border-white/5 bg-black">
+          <div className="max-w-7xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Interface & Workflows</h2>
+            <p className="text-zinc-400 text-lg max-w-2xl mx-auto">See the Gym integration and precise Machine-Weight features directly from the live application.</p>
+          </div>
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+             <div className="relative rounded-[2rem] overflow-hidden border border-zinc-800/50 bg-zinc-900 group shadow-2xl">
+                <img src="/rapsy-home.png" alt="Rapsy Dashboard" className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" />
+                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 pt-20">
+                   <h3 className="text-lg font-bold text-white mb-1">Intelligent Dashboard</h3>
+                   <p className="text-zinc-400 text-sm">Track daily calories, reps, and direct paths to Home and Gym workflows.</p>
+                </div>
+             </div>
+             <div className="relative rounded-[2rem] overflow-hidden border border-zinc-800/50 bg-zinc-900 group shadow-2xl">
+                <img src="/rapsy-gym-3.png" alt="Gym Exercise List" className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" />
+                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 pt-20">
+                   <h3 className="text-lg font-bold text-white mb-1">Extensive Exercise Library</h3>
+                   <p className="text-zinc-400 text-sm">Toggle seamlessly between Home calisthenics and Gym machines.</p>
+                </div>
+             </div>
+             <div className="relative rounded-[2rem] overflow-hidden border border-zinc-800/50 bg-zinc-900 group shadow-2xl">
+                <img src="/rapsy-gym-2.png" alt="Weight Logging Interface" className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" />
+                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 pt-20">
+                   <h3 className="text-lg font-bold text-white mb-1">Dynamic Weight Logging</h3>
+                   <p className="text-zinc-400 text-sm">Precisely log plates, total weight, and dumbbells before tracking.</p>
+                </div>
+             </div>
+             <div className="relative rounded-[2rem] overflow-hidden border border-zinc-800/50 bg-zinc-900 group shadow-2xl">
+                <img src="/rapsy-gym-1.png" alt="Instructional Form Overlay" className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" />
+                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 pt-20">
+                   <h3 className="text-lg font-bold text-white mb-1">Instructional Hold Phase</h3>
+                   <p className="text-zinc-400 text-sm">Ensure perfect form with visual stick figure guides before engaging the AI.</p>
+                </div>
+             </div>
+          </div>
+        </section>
+
         {/* SECURITY & PRO FEATURES BANDS */}
         <section className="py-20 border-y border-white/5 bg-zinc-950 px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
