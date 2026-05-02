@@ -43,7 +43,7 @@ export default function RapsyTermsConditions() {
         <section>
           <h2 className="text-2xl font-semibold mb-3 text-foreground border-b pb-2">3. User Accounts and Authentication</h2>
           <p>
-            Rapsy uses third-party sign-in services (e.g., Google Sign-In) via Firebase Authentication. You are responsible for maintaining the confidentiality of your authentication details. We collect basic profile information (such as your email address and name) solely to sync your workout data across devices. For instructions on how to delete your account and associated data, please refer to our <Link href="/rapsy-data-deletion" className="text-primary hover:underline">Data Deletion Policy</Link>.
+            Rapsy uses third-party sign-in services (e.g., Google Sign-In) via Firebase Authentication. You are responsible for maintaining the confidentiality of your authentication details. We collect basic profile information (such as your email address and name) solely to sync your workout data across devices. For privacy details, please read our <Link href="/rapsy-privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>. For instructions on how to delete your account and associated data, please refer to our <Link href="/rapsy-data-deletion" className="text-primary hover:underline">Data Deletion Policy</Link>.
           </p>
         </section>
 
@@ -61,7 +61,7 @@ export default function RapsyTermsConditions() {
         <section>
           <h2 className="text-2xl font-semibold mb-3 text-foreground border-b pb-2">5. Subscriptions and Payments</h2>
           <p className="mb-3">
-            Rapsy offers premium features through auto-renewing subscriptions (e.g., a "Basic" tier and a "Pro" tier). Payment will be charged to your Google Play Store account at the confirmation of purchase.
+            Rapsy offers premium features through auto-renewing subscriptions (e.g., a &quot;Basic&quot; tier and a &quot;Pro&quot; tier). Payment will be charged to your Google Play Store account at the confirmation of purchase.
           </p>
           <ul className="list-disc list-inside space-y-1 ml-4">
             <li>Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period.</li>

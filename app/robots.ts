@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/api/', '/admin/'],
         },
-        sitemap: 'https://adarshverma.dev/sitemap.xml',
+        sitemap: 'https://avwithai.com/sitemap.xml',
     }
 }
