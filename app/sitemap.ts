@@ -3,6 +3,7 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://avwithai.com'
     const legalLastModified = new Date('2026-05-02T00:00:00.000Z')
+    const whichOneLastModified = new Date('2026-05-17T00:00:00.000Z')
 
     return [
         {
@@ -58,6 +59,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: legalLastModified,
             changeFrequency: 'yearly',
             priority: 0.6,
+        },
+        {
+            url: `${baseUrl}/whichone`,
+            lastModified: whichOneLastModified,
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/whichone-privacy-policy`,
+            lastModified: whichOneLastModified,
+            changeFrequency: 'yearly',
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/whichone-data-deletion`,
+            lastModified: whichOneLastModified,
+            changeFrequency: 'yearly',
+            priority: 0.7,
         },
     ]
 }

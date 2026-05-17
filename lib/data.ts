@@ -4,7 +4,7 @@ export const projects = [
         title: "AI-Powered Indian Stock Market Analyzer",
         description: "AI-powered real-time stock analysis for NSE/BSE markets with ML predictions, technical indicators, and sentiment analysis.",
         technologies: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "Recharts", "TradingView Lightweight Charts", "Socket.IO", "WebSockets", "Node.js", "Express", "Python", "FastAPI", "XGBoost", "Prophet", "scikit-learn", "LSTM", "FinBERT", "yfinance", "BeautifulSoup", "TextBlob", "schedule", "TimescaleDB (PostgreSQL with time-series)", "Redis", "Docker", "Docker Compose", "Nginx"],
-        image: "/image.jpeg",
+        image: "/image.png",
         link: "https://analyzer.avwithai.com/",
         github: "https://github.com/adarshvermaa/analyzer",
     },
@@ -13,9 +13,18 @@ export const projects = [
         title: "Rapsy AI - Personal Fitness Trainer",
         description: "An AI-powered mobile fitness app natively running on-device. Uses ML Kit Pose Detection to track form, count reps, and calculate MET-bound calorie variations in real time without server latency.",
         technologies: ["Flutter", "Dart", "Google ML Kit", "Pose Detection", "TensorFlow", "Firebase", "RevenueCat"],
-        image: "/rapsy-home.png",
+        image: "/rapsy-home.jpeg",
         link: "/rapsy",
         github: "https://github.com/adarshvermaa/thankyou_flutter",
+    },
+    {
+        id: 3,
+        title: "WhichOne - Social Discovery App",
+        description: "A Flutter social discovery app with nearby map browsing, real-time chat, stories, camera and gallery tools, premium filters, privacy controls, and a Firebase-backed realtime architecture.",
+        technologies: ["Flutter", "Dart", "Firebase Auth", "Firestore", "Realtime Database", "Firebase Storage", "Cloud Functions", "FCM", "Mapbox", "RevenueCat", "WebRTC", "E2EE"],
+        image: "/whichone/whichone-logo.png",
+        link: "/whichone",
+        github: "https://github.com/adarshvermaa/whichOne",
     },
 ];
 
