@@ -710,6 +710,7 @@ export function WhichOnePortfolio() {
           <p>&copy; {new Date().getFullYear()} Adarsh Verma. WhichOne portfolio case study.</p>
           <div className="flex flex-wrap gap-5">
             <Link href="/whichone-privacy-policy" className="transition hover:text-white">Privacy Policy</Link>
+            <Link href="/whichone-child-safety-standards" className="transition hover:text-white">Child Safety</Link>
             <Link href="/whichone-data-deletion" className="transition hover:text-white">Data Deletion</Link>
             <Link href="/#contact" className="transition hover:text-white">Contact</Link>
           </div>

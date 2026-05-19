@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 
-const lastUpdated = 'May 17, 2026';
+const lastUpdated = 'May 19, 2026';
 const privacyEmail = 'avwithai.port@gmail.com';
 
 const collectedData = [
@@ -327,11 +327,34 @@ export function WhichOnePrivacyPolicyContent() {
           </ul>
         </Section>
 
-        <Section title="9. Children">
+        <Section title="9. Children and Child Safety">
           <p>
             whichOne is intended for adults and requires users to provide an adult age during profile setup. The app is
             not directed to children under 13. If you believe a child has provided personal data to whichOne, contact the
             developer so the data can be reviewed and deleted where appropriate.
+          </p>
+          <p>
+            whichOne has zero tolerance for child sexual abuse and exploitation (CSAE), child sexual abuse material
+            (CSAM), grooming, sextortion, trafficking of children, sexualization of minors, predatory behavior toward
+            minors, or any content or conduct that endangers children.
+          </p>
+          <p>
+            Users can report child safety concerns in the app through available report, block, abuse-report, support, or
+            safety feedback flows. Child safety concerns can also be sent to{' '}
+            <a href={`mailto:${privacyEmail}`} className="text-primary hover:underline">
+              {privacyEmail}
+            </a>
+            . When whichOne obtains actual knowledge of CSAM or credible CSAE activity, the developer may remove content,
+            restrict or terminate accounts, preserve relevant safety evidence, and report confirmed CSAM or child
+            exploitation concerns to NCMEC, law enforcement, regional child safety authorities, or other appropriate
+            organizations where required or appropriate.
+          </p>
+          <p>
+            whichOne&apos;s published child safety standards are available on the{' '}
+            <Link href="/whichone-child-safety-standards" className="text-primary hover:underline">
+              whichOne Child Safety Standards page
+            </Link>
+            .
           </p>
         </Section>
 
