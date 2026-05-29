@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 
-const lastUpdated = 'May 19, 2026';
+const lastUpdated = 'May 30, 2026';
 const childSafetyEmail = 'avwithai.port@gmail.com';
 
 function Section({

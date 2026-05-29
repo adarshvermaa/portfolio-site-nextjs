@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-const lastUpdated = 'May 17, 2026';
+const lastUpdated = 'May 30, 2026';
 const privacyEmail = 'avwithai.port@gmail.com';
 const mailtoHref =
   'mailto:avwithai.port@gmail.com?subject=whichOne%20Data%20Deletion%20Request';

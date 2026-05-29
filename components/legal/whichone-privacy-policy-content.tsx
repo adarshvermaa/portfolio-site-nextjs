@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 
-const lastUpdated = 'May 19, 2026';
+const lastUpdated = 'May 30, 2026';
 const privacyEmail = 'avwithai.port@gmail.com';
 
 const collectedData = [
@@ -26,6 +26,17 @@ const collectedData = [
       'Profile fields, photos, interests, designation, approximate distance, and active story previews may be visible to signed-in users when your visibility settings allow it.',
     retention:
       'Kept while your account is active. Profile photos and profile data are removed during account deletion. Some safety or audit metadata may be retained in limited form when needed to protect users or comply with obligations.',
+  },
+  {
+    category: 'Profile validation and limits',
+    details:
+      'Character and word count limitations on your display name (maximum 10 words) and bio description (maximum 30 words), and tag limits on custom interests (maximum 3 tags, with each interest tag restricted to a maximum of 5 words).',
+    purpose:
+      'Ensure a clean, readable, high-quality community, and prevent profile fields from being abused for spam or inappropriate content.',
+    sharing:
+      'Your display name, bio, and custom interests are visible to signed-in users as part of your public profile when visibility is enabled.',
+    retention:
+      'Retained while your profile is active, and removed from active systems upon account deletion.',
   },
   {
     category: 'Location and nearby visibility data',
@@ -63,7 +74,7 @@ const collectedData = [
   {
     category: 'Audio/video call and presence data',
     details:
-      'Online status, last seen time, typing indicators, call session IDs, caller/receiver IDs, call type, call status, call logs, WebRTC signaling data, and ICE candidates. Live microphone and camera streams are used for calls.',
+      'Online status, last seen time, typing indicators, call session IDs, caller/receiver IDs, call type, call status, call logs, WebRTC signaling data, ICE candidates, live microphone/camera streams, foreground calling service state, full-screen incoming call intents, audio routing/bluetooth headset state, and phone vibration control.',
     purpose:
       'Show presence, support typing indicators, connect audio/video calls, display incoming call notifications, and log missed/ended calls.',
     sharing:
@@ -213,20 +224,26 @@ export function WhichOnePrivacyPolicyContent() {
         <Section title="2. Data We Access or Collect">
           <div className="space-y-5">
             {collectedData.map((item) => (
-              <article key={item.category} className="rounded-lg border border-border bg-muted/30 p-5">
-                <h3 className="text-lg font-semibold text-foreground">{item.category}</h3>
-                <p className="mt-2">
-                  <strong>Data:</strong> {item.details}
-                </p>
-                <p className="mt-2">
-                  <strong>Use:</strong> {item.purpose}
-                </p>
-                <p className="mt-2">
-                  <strong>Sharing or visibility:</strong> {item.sharing}
-                </p>
-                <p className="mt-2">
-                  <strong>Retention:</strong> {item.retention}
-                </p>
+              <article key={item.category} className="rounded-lg border border-border bg-muted/30 p-6 shadow-sm backdrop-blur-xs">
+                <h3 className="text-lg font-bold text-foreground tracking-tight border-b border-border/50 pb-2 mb-4">{item.category}</h3>
+                <div className="space-y-3 text-sm leading-relaxed">
+                  <div className="grid grid-cols-1 md:grid-cols-[100px_1fr] gap-x-4 gap-y-1">
+                    <span className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider self-start md:text-right pt-0.5">Data</span>
+                    <span className="text-foreground/90">{item.details}</span>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-[100px_1fr] gap-x-4 gap-y-1">
+                    <span className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider self-start md:text-right pt-0.5">Purpose</span>
+                    <span>{item.purpose}</span>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-[100px_1fr] gap-x-4 gap-y-1">
+                    <span className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider self-start md:text-right pt-0.5">Sharing</span>
+                    <span>{item.sharing}</span>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-[100px_1fr] gap-x-4 gap-y-1">
+                    <span className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider self-start md:text-right pt-0.5">Retention</span>
+                    <span>{item.retention}</span>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
