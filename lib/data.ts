@@ -22,7 +22,7 @@ export const projects = [
         title: "WhichOne - Social Discovery App",
         description: "A Flutter social discovery app with nearby map browsing, real-time chat, stories, camera and gallery tools, premium filters, privacy controls, and a Firebase-backed realtime architecture.",
         technologies: ["Flutter", "Dart", "Firebase Auth", "Firestore", "Realtime Database", "Firebase Storage", "Cloud Functions", "FCM", "Mapbox", "RevenueCat", "WebRTC", "E2EE"],
-        image: "/whichone/whichone-logo.png",
+        image: "/whichone/whichone-showcase.png",
         link: "/whichone",
         github: "https://github.com/adarshvermaa/whichOne",
     },
