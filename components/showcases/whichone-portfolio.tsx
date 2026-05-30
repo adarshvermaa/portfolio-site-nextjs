@@ -28,6 +28,7 @@ import {
   Video,
   Zap,
 } from "lucide-react";
+import { FaGooglePlay } from "react-icons/fa6";
 
 const visibilityModes = [
   {
@@ -527,14 +528,23 @@ export function WhichOnePortfolio() {
             <p className="mt-7 max-w-[350px] text-lg leading-8 text-slate-300 md:max-w-2xl md:text-xl">
               A modern social app experience with nearby discovery, real-time chat, stories, media sharing, and smart privacy controls.
             </p>
-            <div className="mt-10 flex w-full max-w-[350px] flex-col gap-4 sm:w-auto sm:max-w-full sm:flex-row">
-              <a href="#features" className="inline-flex w-full max-w-full items-center justify-center gap-2 rounded-full bg-white px-7 py-4 font-bold text-black shadow-[0_0_42px_rgba(255,255,255,0.25)] transition hover:scale-[1.02] sm:w-auto">
-                View Features
-                <ArrowRight className="h-5 w-5" />
+            <div className="mt-10 flex w-full max-w-[420px] flex-col gap-4 sm:w-auto sm:max-w-full sm:flex-row sm:items-center">
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.whichone.quo" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex w-full max-w-full items-center justify-center gap-3 rounded-full border border-amber-500/20 bg-gradient-to-r from-amber-500/15 via-fuchsia-500/10 to-cyan-500/5 px-7 py-4 font-bold text-white shadow-[0_0_30px_rgba(245,158,11,0.12)] backdrop-blur-md transition hover:scale-[1.02] hover:border-amber-500/40 hover:shadow-[0_0_35px_rgba(245,158,11,0.2)] sm:w-auto"
+              >
+                <FaGooglePlay className="h-5 w-5 text-amber-300 animate-pulse" />
+                <span>Get it on Google Play</span>
               </a>
-              <Link href="/#contact" className="inline-flex w-full max-w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-7 py-4 font-bold text-white backdrop-blur transition hover:bg-white/15 sm:w-auto">
-                Start a Project
-              </Link>
+              <a 
+                href="#features" 
+                className="inline-flex w-full max-w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-7 py-4 font-semibold text-slate-200 backdrop-blur transition hover:bg-white/10 hover:text-white sm:w-auto"
+              >
+                View Features
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
 
@@ -692,13 +702,19 @@ export function WhichOnePortfolio() {
             <p className="whichone-reveal mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
               Let&apos;s turn your product idea into a polished, scalable mobile experience with the right design system, backend, and launch path.
             </p>
-            <div className="whichone-reveal mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-              <Link href="/#contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-black transition hover:scale-[1.02]">
+            <div className="whichone-reveal mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.whichone.quo" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-amber-500/20 bg-gradient-to-r from-amber-500/15 via-fuchsia-500/10 to-cyan-500/5 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(245,158,11,0.12)] backdrop-blur-md transition hover:scale-[1.02] hover:border-amber-500/40 hover:shadow-[0_0_35px_rgba(245,158,11,0.2)] sm:w-auto"
+              >
+                <FaGooglePlay className="h-5 w-5 text-amber-300 animate-pulse" />
+                <span>Download on Google Play</span>
+              </a>
+              <Link href="/#contact" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-black transition hover:scale-[1.02] sm:w-auto">
                 Contact Us
                 <ArrowRight className="h-5 w-5" />
-              </Link>
-              <Link href="/whichone-privacy-policy" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-8 py-4 font-bold text-white transition hover:bg-white/15">
-                Privacy Policy
               </Link>
             </div>
           </div>
