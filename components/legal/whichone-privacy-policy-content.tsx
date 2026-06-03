@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 
-const lastUpdated = 'May 30, 2026';
+const lastUpdated = 'June 4, 2026';
 const privacyEmail = 'avwithai.port@gmail.com';
 
 const collectedData = [
