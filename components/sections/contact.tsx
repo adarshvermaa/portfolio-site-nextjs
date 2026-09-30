@@ -107,11 +107,11 @@ export function Contact() {
                             <div className="p-3 bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 rounded-xl">
                                 <Mail className="w-5 h-5" />
                             </div>
-                            <div>
+                            <div className="min-w-0">
                                 <h3 className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Direct Email</h3>
                                 <Link
                                     href={`mailto:${personalInfo.contactEmail}`}
-                                    className="font-medium text-foreground hover:text-cyan-400 transition-colors text-sm sm:text-base"
+                                    className="break-all font-medium text-foreground hover:text-cyan-400 transition-colors text-sm sm:text-base"
                                 >
                                     {personalInfo.contactEmail}
                                 </Link>

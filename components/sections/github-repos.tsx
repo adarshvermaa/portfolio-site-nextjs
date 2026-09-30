@@ -188,15 +188,15 @@ export function GitHubRepos() {
                         </div>
 
                         {/* Sort Selector & Count */}
-                        <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end">
+                        <div className="flex flex-wrap items-center gap-3 w-full md:w-auto justify-between md:justify-end">
                             <span className="text-xs text-muted-foreground font-mono">
                                 Showing {filteredRepos.length} of {allGitHubRepos.length} repos
                             </span>
-                            <div className="flex items-center gap-1.5 text-xs border border-border/70 rounded-xl p-1 bg-background/60 backdrop-blur-md">
+                            <div className="flex max-w-full items-center gap-1 text-[11px] sm:gap-1.5 sm:text-xs border border-border/70 rounded-xl p-1 bg-background/60 backdrop-blur-md">
                                 <span className="px-2 text-muted-foreground">Sort:</span>
                                 <button
                                     onClick={() => setSortBy("featured")}
-                                    className={`px-2.5 py-1 rounded-lg transition-colors ${
+                                    className={`px-2 py-1 sm:px-2.5 rounded-lg transition-colors ${
                                         sortBy === "featured"
                                             ? "bg-foreground text-background font-medium"
                                             : "text-muted-foreground hover:text-foreground"
@@ -206,7 +206,7 @@ export function GitHubRepos() {
                                 </button>
                                 <button
                                     onClick={() => setSortBy("stars")}
-                                    className={`px-2.5 py-1 rounded-lg transition-colors ${
+                                    className={`px-2 py-1 sm:px-2.5 rounded-lg transition-colors ${
                                         sortBy === "stars"
                                             ? "bg-foreground text-background font-medium"
                                             : "text-muted-foreground hover:text-foreground"
@@ -216,7 +216,7 @@ export function GitHubRepos() {
                                 </button>
                                 <button
                                     onClick={() => setSortBy("name")}
-                                    className={`px-2.5 py-1 rounded-lg transition-colors ${
+                                    className={`px-2 py-1 sm:px-2.5 rounded-lg transition-colors ${
                                         sortBy === "name"
                                             ? "bg-foreground text-background font-medium"
                                             : "text-muted-foreground hover:text-foreground"

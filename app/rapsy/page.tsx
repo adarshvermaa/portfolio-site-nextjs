@@ -84,7 +84,7 @@ export default function RapsyShowcase() {
 
           {/* Abstract Device Graphic */}
           <div className="mt-24 relative w-full max-w-4xl mx-auto h-[400px]">
-            <div className="absolute left-1/2 -translate-x-1/2 w-[300px] md:w-[600px] h-full rounded-[2rem] border border-white/10 bg-black/40 backdrop-blur-xl shadow-2xl overflow-hidden flex items-center justify-center group transform perspective-[1000px] rotate-x-[5deg] hover:rotate-x-0 transition-transform duration-700">
+            <div className="absolute left-1/2 -translate-x-1/2 w-[min(300px,calc(100vw-3rem))] md:w-[600px] h-full rounded-[2rem] border border-white/10 bg-black/40 backdrop-blur-xl shadow-2xl overflow-hidden flex items-center justify-center group transform perspective-[1000px] rotate-x-[5deg] hover:rotate-x-0 transition-transform duration-700">
               {/* Virtual Scanner Line */}
               <div className="absolute top-0 w-full h-[2px] bg-emerald-400 shadow-[0_0_20px_rgba(16,185,129,1)] animate-[scan_3s_ease-in-out_infinite]" />
 
