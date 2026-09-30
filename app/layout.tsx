@@ -1,29 +1,41 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SmoothScroll } from "@/components/ui/smooth-scroll";
 import { DevToolsHider } from "@/components/ui/dev-tools-hider";
-
-const inter = Inter({ subsets: ["latin"] });
+import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://avwithai.com"),
-  title: "Adarsh Verma | Full Stack Developer",
-  description: "Portfolio of Adarsh Verma, a Full Stack Developer specializing in building exceptional digital experiences.",
-  keywords: ["Adarsh Verma", "Portfolio", "Full Stack Developer", "Next.js", "React", "Web Developer"],
+  title: "Adarsh Verma | Full-Stack AI Engineer & Systems Architect",
+  description: "Portfolio of Adarsh Verma, Full-Stack AI Engineer specializing in Model Context Protocol (MCP), autonomous agents, high-throughput Rust distributed systems, quant trading platforms, and production mobile/web applications. Available for freelance & remote worldwide.",
+  keywords: [
+    "Adarsh Verma",
+    "Full-Stack AI Engineer",
+    "Model Context Protocol",
+    "MCP",
+    "Autonomous Agents",
+    "Rust Developer",
+    "FastAPI",
+    "Python",
+    "Next.js",
+    "Flutter",
+    "Algorithmic Trading",
+    "Freelance AI Engineer",
+    "Remote Software Engineer"
+  ],
   authors: [{ name: "Adarsh Verma" }],
   openGraph: {
-    title: "Adarsh Verma | Full Stack Developer",
-    description: "Building exceptional digital experiences with performance and aesthetics.",
-    url: "https://avwithai.com", // Replace with actual URL
-    siteName: "Adarsh Verma Portfolio",
+    title: "Adarsh Verma | Full-Stack AI Engineer & Systems Architect",
+    description: "Building production autonomous AI systems, high-concurrency Rust backends, and responsive applications. Open to freelance consulting & worldwide remote roles.",
+    url: "https://avwithai.com",
+    siteName: "Adarsh Verma Portfolio & Systems Hub",
     images: [
       {
-        url: "/og-image.jpg", // Needs to be added to public/
+        url: "/image.png",
         width: 1200,
         height: 630,
-        alt: "Adarsh Verma Portfolio",
+        alt: "Adarsh Verma - Full-Stack AI Engineer Portfolio",
       },
     ],
     locale: "en_US",
@@ -31,15 +43,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adarsh Verma | Full Stack Developer",
-    description: "Building exceptional digital experiences with performance and aesthetics.",
-    images: ["/og-image.jpg"],
+    title: "Adarsh Verma | Full-Stack AI Engineer & Systems Architect",
+    description: "Building production autonomous AI systems, high-concurrency Rust backends, and responsive applications. Open to freelance consulting & worldwide remote roles.",
+    images: ["/image.png"],
   },
 };
-
-import Script from "next/script";
-
-// ...
 
 export default function RootLayout({
   children,
@@ -49,7 +57,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} min-h-screen bg-background text-foreground antialiased`}
+        className="font-sans min-h-screen bg-background text-foreground antialiased"
         suppressHydrationWarning
       >
         <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
@@ -66,13 +74,13 @@ export default function RootLayout({
             "@type": "Person",
             "name": "Adarsh Verma",
             "url": "https://avwithai.com",
-            "jobTitle": "Full Stack Developer",
+            "jobTitle": "Full-Stack AI Engineer | Systems & Real-Time Software",
             "sameAs": [
               "https://github.com/adarshvermaa",
-              "https://linkedin.com/in/adarsh-verma",
-              "https://x.com/adarsh_verma"
+              "https://www.linkedin.com/in/adarsh-verma-887a3819a/",
+              "https://x.com/Adarshvermaaa"
             ],
-            "description": "Full Stack Developer specializing in building exceptional digital experiences using Next.js, React, and AI technologies."
+            "description": "Full-Stack AI Engineer with 5+ years of software development experience specializing in Model Context Protocol (MCP), autonomous agents, RAG, high-throughput Rust distributed backends, and Flutter mobile applications."
           })}
         </Script>
       </body>
